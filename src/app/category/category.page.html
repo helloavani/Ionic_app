@@ -1,0 +1,38 @@
+ <ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Category</ion-title>
+  </ion-toolbar>
+
+  <ion-slides [options]="slideOpts">
+    <ion-slide *ngFor="let cat of categories_list" >
+       
+     <a  [routerLink] = "['/category', cat._id]"> <ion-chip >{{
+        cat.name
+      }}</ion-chip></a>
+
+
+    </ion-slide>
+  
+  </ion-slides>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngFor="let items of brands_list">
+    
+
+    <ion-item *ngIf="brands_list.length > 0 " [routerLink] ="['/product', items._id]">{{
+      items.name
+    }}
+    
+
+
+  </ion-item>
+  <ion-item *ngIf="brands_list.length === 0" class="alert alert-primary" role="alert" [routerLink] ="['/product']">No data  </ion-item>
+
+
+
+  </ion-list>
+</ion-content>

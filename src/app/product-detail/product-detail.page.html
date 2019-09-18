@@ -1,0 +1,140 @@
+<ion-header>
+  <ion-buttons slot="start">
+    <ion-back-button></ion-back-button>
+  </ion-buttons>
+</ion-header>
+
+<ion-content>
+  <div class="container ion-padding-top">
+    <ion-slides pager="true" [options]="slideOpts">
+      <ion-slide *ngFor="let i of x">
+        <img
+          src="https://dummyimage.com/400x400/000/fff"
+          class="img-fluid"
+          alt="Responsive image"
+        />
+      </ion-slide>
+    </ion-slides>
+  </div>
+  <section padding *ngFor="let i of products">
+    <h4>{{i.productname}}| {{i.description}} | color | version</h4>
+    <small style="color: green">Get 30% off</small>
+    <h3>{{i.renttype}} | </h3>
+  </section>
+
+  <h5 padding class="center border-u-d">Share</h5>
+  <section padding class="border-u-d">
+    <h5>Select color</h5>
+    <button  style="color:#4287f5;"class="btn btn-sm">red</button>
+    <button style="color:#cc162f;" class="btn btn-sm">yellow</button>
+    <button style= "color:#4acc16;" class="btn btn-sm">blue</button>
+  </section>
+
+  <section padding class="border-u-d">
+    <small style="color: green">Offer</small>
+    <small style="color: green">Offer</small>
+    <small style="color: green">Offer</small>
+  </section>
+
+  <section padding class="border-u-d">
+    <h4>Details</h4>
+    <div padding>
+      <h6>Highlights</h6>
+      <small>Highlighted details</small><br />
+      <small>Highlighted details</small><br />
+      <small>Highlighted details</small><br />
+      <small style="color:blue">View all details</small>
+    </div>
+  </section>
+
+  <section padding class="border-u-d">
+    <h4>Reviews</h4>
+    <div padding>
+    <ion-grid>
+      <!-- <div class="thumbnails">
+        <div class="list-thumbnail">
+    <div class="img-thumb" [class.selected-img]="x.selected" *ngFor="let x of images" (click)="onThumbnailClick(x)">
+      <img [src]="x.images">
+    </div>
+  </div>
+       
+      </div> -->
+
+
+
+
+
+    <ion-row>
+    <ion-col>
+      <img src="../assets/images/pic1.png" style="  object-fit: cover; width:30px height:40px; ">
+
+  <small style ="color:1f1e1b;  font-size: 15px;">Eric Holzhueter
+  </small>
+
+<ion-row>
+
+<ion-icon name="star" style ="color:#fac61b;font-size:30px; margin-left: 15px;"></ion-icon>
+<ion-icon name="star" style ="color:#fac61b;font-size:30px; margin-left: 1px; margin-top: -2px;"></ion-icon>
+<ion-icon name="ios-star-outline" style ="color:#fac61b;font-size:30px; margin-left: 1px;"></ion-icon><p style="  font-size: 15px; color:#171615;
+">The Samsung 128GB EVO Select and SanDisk 64GB Extreme Pro</p>
+
+  </ion-row>
+  
+</ion-col>
+
+
+
+<!--           <div><small>Eric Holzhueter  </small></div>
+ -->       
+
+
+
+       </ion-row>
+
+
+
+     </ion-grid> 
+
+
+
+      <h5>Review 1</h5>
+      <h5>Review 1</h5>
+      <h5>Review 1</h5>
+      <h5>Review 1</h5>
+      <h5>Review 1</h5>
+    </div>
+  </section>
+
+  <section padding class="border-u-d">
+    <h4>Similar Products</h4>
+    <div padding>
+      <ion-grid>
+        <ion-row center *ngFor = 'let i of similar_prod'>
+          <ion-col text-center>
+            <img src="https://dummyimage.com/100x100/471a47/fff" alt="" />
+            <h5>{{i.productname}}</h5>
+            <small>{{i.renttype}}</small>
+          </ion-col>
+          <ion-col>
+            <img src="https://dummyimage.com/100x100/471a47/fff" alt="" />
+            <h5>{{i.productname}}</h5>
+            <small>{{i.renttype}}</small>
+          </ion-col>
+        </ion-row>
+        <ion-row center *ngFor = 'let i of similar_prod'>
+          <ion-col text-center>
+            <img src="https://dummyimage.com/100x100/471a47/fff" alt="" />
+            <h5>{{i.productname}}</h5>
+            <small>{{i.renttype}}</small>
+          </ion-col>
+          <ion-col>
+            <img src="https://dummyimage.com/100x100/471a47/fff" alt="" />
+            <h5>{{i.productname}}</h5>
+            <small>{{i.renttype}}</small>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <small class="center">View all</small>
+    </div>
+  </section>
+</ion-content>

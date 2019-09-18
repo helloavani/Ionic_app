@@ -1,0 +1,77 @@
+.smaller {
+  font-size: 14px;
+}
+
+.border-u-d {
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+   background-color:#edf0ee;
+    box-shadow:         3px 3px 4px 5px #ccc;
+    border: 1px solid black;
+      border-radius: 8px;
+
+}
+
+.bill {
+  margin-left: 5%;
+  margin-right: 5%;
+  p {
+    margin: 0;
+    padding: 0;
+    background-color:#edf0ee;
+     /*box-shadow:         3px 3px 5px 6px #ccc;*/
+  }
+}
+
+.dark {
+  background-color: #232f3e;
+}
+.header{
+    background-color: #e33e24;
+
+}
+/*.cartitems{
+background-color: #f5f3f2;
+}*/
+
+.image{
+  height:120px;
+  width:15px;
+  border-radius: 20px;
+  padding:10px;
+  object-fit: cover;
+  opacity: 1;
+
+  
+
+}
+.trash{
+  font-size: 25px;
+  opacity: 1;
+  float : right;
+}
+.text{
+  font-family: verdana;
+  /*text-align: left;
+  text-indent: 50px;
+  word-spacing: 5px;*/
+  font-color:#48494a;
+  font-size: 15px;
+
+}
+.bottomRow
+{
+  margin-top: -20px;
+}
+/*.table>tbody>tr>td, .table>tfoot>tr>td{
+    vertical-align: middle;
+}
+@media screen and (max-width: 600px) {
+    table#cart tbody td .form-control{
+    width:20%;
+    display: inline !important;
+  }
+}*/
+
+  
+  

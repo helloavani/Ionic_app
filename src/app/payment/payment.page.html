@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Payment</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <h4>Select a Payment Method</h4>
+  <div class="card">
+    <ion-radio-group>
+      <ion-item (click)="Expand()">
+        <h6 class="small">Credit Card</h6>
+
+        <ion-radio slot="start" value="4" checked></ion-radio>
+        <div #expand class="expand" style="color: red"></div>
+      </ion-item>
+
+      <ion-item>
+        <h6 class="small">Debit Card</h6>
+
+        <ion-radio slot="start" value="1"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <h6 class="small">UPI</h6>
+
+        <ion-radio slot="start" value="2"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <h6 class="small">Cash on Delivery</h6>
+
+        <ion-radio slot="start" value="3"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+  </div>
+
+  <ion-button padding shape="round" color="dark">Place Order</ion-button>
+</ion-content>

@@ -1,0 +1,21 @@
+.faded {
+  color: gray;
+}
+
+.border-u-d {
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+}
+
+.small {
+  font-size: 14px;
+}
+
+.expand {
+  transition: height 0.4s ease-in-out;
+  overflow: hidden;
+  height: auto;
+}
+.dark {
+  background-color: #232f3e;
+}

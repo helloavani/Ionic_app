@@ -1,0 +1,111 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Cart</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div  padding>
+    <ion-grid *ngFor="let i of items" >
+      
+    <ion-row class="row-gap"  >
+     <ion-col  >
+      <img src="../assets/images/cartitem.png">
+     </ion-col> 
+     
+     <ion-col>
+     <ion-label style="font-size: 80% ;" >{{i.productname}}</ion-label><br>
+      <ion-label style="color: ##0f0f0f;">{{i.renttype}}</ion-label>
+     <small style="color:#3b3939">Rs 777</small>
+     </ion-col>
+    
+     <ion-col >
+      <ion-icon  class="trash" name="trash" (click)="deletecartitem(i._id)"></ion-icon>
+
+     </ion-col>
+    </ion-row>
+   <!--  <ion-row>
+      <ion-col  >
+      <img src="../assets/images/cartitem.png">
+     </ion-col> 
+     
+     <ion-col>
+     <ion-label style="font-size: 80% ;" >{{i.productname}}</ion-label><br>
+      <ion-label style="color: ##0f0f0f;">{{i.renttype}}</ion-label>
+     <small style="color:#3b3939">Rs 777</small>
+     </ion-col>
+    
+     <ion-col >
+      <ion-icon  class="trash" name="trash" (click)="deletecartitem(i._id)"></ion-icon>
+
+     </ion-col>
+
+
+    </ion-row> -->
+
+  
+  </ion-grid>
+   
+
+    
+
+    <ion-item lines="none">
+      <ion-avatar slot="start">
+        <img
+          src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y"
+        />
+      </ion-avatar>
+      <ion-label>Item Avatar</ion-label>
+      <small>Rs 777</small>
+      <ion-icon name="trash"></ion-icon>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-avatar slot="start">
+        <img
+          src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y"
+        />
+      </ion-avatar>
+      <ion-label>Item Avatar</ion-label>
+      <small>Rs 777</small>
+      <ion-icon name="trash"></ion-icon>
+    </ion-item>
+    <hr />
+  </div>
+
+
+  <div class="bill border-u-d" padding>
+    <p class="smaller" >Cart Price <small class="float-right">8778</small></p>
+    <p class="smaller" class="text">
+      Discount <small class="float-right" style="color: green">-456</small>
+    </p>
+    <p class="smaller" class="text">
+      Delivery Charges <small style="color:red" class="float-right">+48</small>
+    </p>
+    <h6><strong>Cart Total</strong><small class="float-right">4568</small></h6>
+  </div>
+
+  <div padding style="text-align: center;">
+    <ion-button (click)="gotoCheckOut()" padding shape="round" color="dark">Proceed to Checkout</ion-button>
+  </div>
+</ion-content>
